@@ -1,0 +1,140 @@
+/* Import Font (jika menggunakan Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset Dasar & Pengaturan Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Prioritaskan Poppins */
+    line-height: 1.6;
+    background-color: #F4F1E_A; /* Warna latar belakang - krem/pasir lembut */
+    color: #3D405B; /* Warna teks utama - coklat tua keabu-abuan */
+    padding-top: 20px; /* Beri sedikit ruang di atas */
+}
+
+.container {
+    max-width: 600px; /* Batas lebar maksimum di layar besar */
+    margin: 0 auto; /* Pusatkan container */
+    padding: 20px;
+    background-color: #FFFFFF; /* Latar belakang konten putih */
+    border-radius: 8px; /* Sedikit lengkungan sudut */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E0E0E0; /* Garis pemisah halus */
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #2E7D32; /* Hijau Hutan Tua - Warna utama BMB */
+    font-size: 1.8em; /* Ukuran judul utama */
+    margin-bottom: 10px;
+    font-weight: 700; /* Tebal */
+}
+
+header p {
+    font-size: 0.95em;
+    color: #555; /* Abu-abu sedikit lebih gelap untuk teks pengantar */
+    margin-bottom: 15px;
+}
+
+header .note {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #777;
+}
+
+/* Bagian Opsi Desain */
+.design-options h2,
+.brochure-option h2 {
+    color: #4CAF50; /* Hijau Cerah - Sub-judul */
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center; /* Pusatkan sub-judul */
+}
+
+.option-card {
+    background-color: #f9f9f9; /* Latar belakang kartu sedikit abu-abu */
+    border: 1px solid #e_0e0e_0; /* Border halus */
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center; /* Pusatkan konten kartu */
+}
+
+.option-card .description {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Tombol / Link Tampilan */
+.btn-view {
+    display: inline-block; /* Agar bisa diberi padding & margin */
+    background-color: #FF9800; /* Oranye - Energi, Kontras */
+    color: #FFFFFF; /* Teks putih */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px; /* Tombol bentuk pil */
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-view span {
+    display: block; /* Buat label tambahan di baris baru */
+    font-size: 0.8em;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.btn-view:hover {
+    background-color: #F57C00; /* Oranye lebih gelap saat hover */
+    transform: translateY(-2px); /* Efek sedikit terangkat */
+}
+
+.btn-view:active {
+    transform: translateY(0); /* Kembali ke posisi normal saat diklik */
+}
+
+/* Tombol khusus untuk brosur (jika ingin warna berbeda) */
+.btn-brochure {
+     background-color: #0288D1; /* Biru Langit - Alternatif */
+}
+
+.btn-brochure:hover {
+     background-color: #01579B; /* Biru lebih gelap */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #E0E0E0; /* Garis pemisah */
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Penyesuaian untuk layar sedikit lebih besar (jika diperlukan) */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    .container {
+        padding: 30px 40px; /* Padding lebih besar di layar besar */
+    }
+}
