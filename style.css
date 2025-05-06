@@ -138,3 +138,60 @@ footer {
         padding: 30px 40px; /* Padding lebih besar di layar besar */
     }
 }
+/* === Tambahan untuk Layout Desktop === */
+
+/* Terapkan gaya ini hanya untuk layar dengan lebar minimal 992px (umumnya tablet landscape / desktop kecil) */
+@media (min-width: 992px) {
+
+    .container {
+        max-width: 1140px; /* Lebarkan container utama untuk desktop */
+        padding: 40px 50px; /* Beri padding lebih lega */
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Judul lebih besar di desktop */
+    }
+
+    /* --- Tata Letak Utama untuk Opsi --- */
+
+    /* Gunakan Flexbox untuk menata bagian opsi secara horizontal */
+    .design-options {
+        display: flex;            /* Aktifkan flex container */
+        justify-content: space-around; /* Beri jarak merata antar item */
+        align-items: flex-start;   /* Ratakan item ke atas jika tingginya beda */
+        gap: 25px;              /* Jarak antar kartu opsi */
+        flex-wrap: wrap;        /* Biarkan wrap jika container terlalu sempit (jarang terjadi di 992px+) */
+        margin-bottom: 40px;    /* Jarak bawah setelah grup mockup */
+    }
+
+    /* Atur basis lebar untuk setiap kartu mockup (kira-kira 1/3 lebar, dikurangi gap) */
+    .design-options .option-card {
+        flex-basis: calc(33.333% - 20px); /* Kalkulasi lebar basis untuk 3 kolom */
+        flex-grow: 1; /* Izinkan kartu sedikit membesar jika ada ruang ekstra */
+        margin-bottom: 0; /* Hapus margin bawah yg tadinya untuk mobile stacking */
+        padding: 20px; /* Sedikit padding lebih di dalam kartu */
+    }
+
+    /* Tengahkan bagian brosur dan batasi lebarnya agar tidak terlalu lebar */
+    .brochure-option {
+        text-align: center; /* Pastikan kontennya terpusat */
+    }
+
+    .brochure-option .option-card {
+        max-width: 400px; /* Batasi lebar kartu brosur */
+        margin: 0 auto; /* Tengahkan kartu brosur */
+        display: inline-block; /* Agar margin auto bekerja dan tetap bisa di-style */
+        width: auto; /* Biarkan lebarnya menyesuaikan konten, hingga max-width */
+    }
+
+     /* --- Penyesuaian Spasi Vertikal (agar lebih muat 1 layar) --- */
+    header {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+}
